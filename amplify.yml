@@ -9,7 +9,7 @@ frontend:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: frontend/dist
+    baseDirectory: frontend/build
     files:
       - '**/*'
 backend:
@@ -21,6 +21,7 @@ backend:
     build:
       commands:
         - npm run test
+
     test:
       commands:
         - cd ../frontend
