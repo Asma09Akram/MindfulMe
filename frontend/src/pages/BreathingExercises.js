@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Card, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import '../styles/BreathingExercises.css';
 
 const BreathingExercises = () => {
+  const navigate = useNavigate();
   const [phase, setPhase] = useState('inhale');
   const [timer, setTimer] = useState(4);
   const [isActive, setIsActive] = useState(true);
@@ -20,7 +22,7 @@ const BreathingExercises = () => {
                 return 4; // Hold for 4 seconds
               case 'hold':
                 setPhase('exhale');
-                return 6; // Exhale for 6 seconds
+                return 4; // Exhale for 4 seconds
               case 'exhale':
                 setPhase('rest');
                 return 4; // Rest for 4 seconds
@@ -53,8 +55,20 @@ const BreathingExercises = () => {
     setIsActive(!isActive);
   };
 
+  const handleHomeClick = () => {
+    navigate('/');
+  };
+
   return (
     <Container className="breathing-container">
+      <div className="home-button">
+        <Button 
+          variant="outline-primary"
+          onClick={handleHomeClick}
+        >
+          Home
+        </Button>
+      </div>
       <Card className="breathing-card">
         <Card.Body>
           <div className={`breathing-circle ${phase}`}>
@@ -66,7 +80,7 @@ const BreathingExercises = () => {
             <ul>
               <li><strong>Inhale:</strong> Breathe in deeply for 4 seconds.</li>
               <li><strong>Hold:</strong> Hold your breath for 4 seconds.</li>
-              <li><strong>Exhale:</strong> Breathe out slowly for 6 seconds.</li>
+              <li><strong>Exhale:</strong> Breathe out slowly for 4 seconds.</li>
               <li><strong>Rest:</strong> Relax for 4 seconds before the next cycle.</li>
             </ul>
           </div>

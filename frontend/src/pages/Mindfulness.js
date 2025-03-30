@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import '../styles/Mindfulness.css';
@@ -18,6 +17,7 @@ const mindfulnessQuotes = [
     author: "Buddha"
   }
 ];
+
 
 // Define the tips array
 const beginnerTips = [
@@ -133,4 +133,3 @@ const Mindfulness = () => {
 };
 
 export default Mindfulness;
-

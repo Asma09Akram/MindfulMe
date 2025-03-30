@@ -1,9 +1,18 @@
+
 .breathing-container {
   padding: 2rem;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.home-button {
+  position: absolute;
+  top: -70px;
+  right: 20px;
+  z-index: 1000;
 }
 
 .breathing-card {
