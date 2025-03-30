@@ -1,0 +1,61 @@
+/* Add these new styles to your existing Meditation.css */
+.meditation-timer-card {
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timer-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.duration-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.time-display {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.control-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.meditation-video-card {
+  height: 100%;
+  transition: transform 0.2s;
+}
+
+.meditation-video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.embed-responsive {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .meditation-timer-card {
+    margin-top: 2rem;
+  }
+  
+  .duration-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .control-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
